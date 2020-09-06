@@ -8,26 +8,20 @@ const router = new Router({
     routes: [
       {
         path: '/',
-        component: () => import('../App'),
-        children: [
-          {
-            path: '/',
-            name: 'Inicio',
-            component: () => import('../views/Inicio')
-          }
-          ,
-          {
-            path: '/form',
-            name: 'Formulario',
-            component: () => import('../views/Form')
-          }
-          ,
-          {
-            path: '/paises',
-            name: 'Paises',
-            component: () => import('../views/Paises')
-          }
-        ]
+        name: 'Inicio',
+        component: () => import('../views/Inicio')
+      }
+      ,
+      {
+        path: '/form',
+        name: 'Formulario',
+        component: () => import('../views/Form')
+      }
+      ,
+      {
+        path: '/paises',
+        name: 'Paises',
+        component: () => import('../views/Paises')
       },
       {
         path:'*',
